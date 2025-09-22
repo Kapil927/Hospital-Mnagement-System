@@ -1,0 +1,378 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* App.css - Person Class Hierarchy Styles */
+
+/* Container and Layout */
+.app-container {
+  font-family: system-ui, -apple-system, sans-serif;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 24px;
+  background-color: #f9fafb;
+  min-height: 100vh;
+}
+
+/* Typography */
+.app-title {
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+  color: #1f2937;
+  margin-bottom: 8px;
+}
+
+.app-subtitle {
+  text-align: center;
+  color: #6b7280;
+  margin-bottom: 40px;
+  font-size: 16px;
+}
+
+.section-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #1f2937;
+}
+
+.section-description {
+  color: #6b7280;
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+
+/* Grid Layout */
+.main-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+@media (max-width: 768px) {
+  .main-grid {
+      grid-template-columns: 1fr;
+  }
+}
+
+/* Sections */
+.section {
+  background-color: white;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.output-section {
+  background-color: white;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  margin-bottom: 32px;
+}
+
+.explanation-section {
+  background-color: white;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+/* Person Cards */
+.person-card {
+  border: 2px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 12px 0;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background-color: #ffffff;
+}
+
+.person-card:hover {
+  border-color: #d1d5db;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.person-card.selected {
+  border-color: #6366f1;
+  background-color: #eef2ff;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.role-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Role Icons */
+.role-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.person-color {
+  background-color: #6b7280;
+}
+
+.student-color {
+  background-color: #3b82f6;
+}
+
+.teacher-color {
+  background-color: #10b981;
+}
+
+/* Person Details */
+.person-details {
+  flex: 1;
+}
+
+.person-name {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 4px;
+}
+
+.role-badge {
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 12px;
+  color: white;
+  font-weight: 500;
+}
+
+.person-description {
+  color: #6b7280;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+/* Extra Info */
+.extra-info {
+  font-size: 12px;
+  font-weight: 500;
+  padding: 4px 8px;
+  border-radius: 6px;
+  display: inline-block;
+}
+
+.student-info {
+  background-color: #dbeafe;
+  color: #1e40af;
+}
+
+.teacher-info {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+/* Buttons */
+.button-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.action-button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  color: white;
+}
+
+.introduce-btn {
+  background-color: #8b5cf6;
+}
+
+.introduce-btn:hover {
+  background-color: #7c3aed;
+}
+
+.inheritance-btn {
+  background-color: #f59e0b;
+}
+
+.inheritance-btn:hover {
+  background-color: #d97706;
+}
+
+.method-btn {
+  background-color: #06b6d4;
+}
+
+.method-btn:hover {
+  background-color: #0891b2;
+}
+
+/* Color-specific button styles */
+.action-button.person-color {
+  background-color: #6b7280;
+}
+
+.action-button.person-color:hover {
+  background-color: #4b5563;
+}
+
+.action-button.student-color {
+  background-color: #3b82f6;
+}
+
+.action-button.student-color:hover {
+  background-color: #2563eb;
+}
+
+.action-button.teacher-color {
+  background-color: #10b981;
+}
+
+.action-button.teacher-color:hover {
+  background-color: #059669;
+}
+
+/* No Selection State */
+.no-selection {
+  color: #6b7280;
+  font-style: italic;
+}
+
+/* Output Console */
+.output-content {
+  background-color: #f8fafc;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 16px;
+  min-height: 60px;
+  font-size: 14px;
+  color: #374151;
+  white-space: pre-line;
+  font-family: Monaco, Consolas, monospace;
+}
+
+/* Concept List */
+.concept-list {
+  list-style: none;
+  padding: 0;
+}
+
+.concept-item {
+  padding: 12px;
+  margin: 8px 0;
+  background-color: #f8fafc;
+  border-radius: 8px;
+  border-left: 4px solid #3b82f6;
+}
+
+.concept-title {
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.concept-desc {
+  color: #6b7280;
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+/* Focus and Accessibility */
+.action-button:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+.person-card:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(10px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+.person-card {
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* Print Styles */
+@media print {
+  .app-container {
+      background-color: white;
+      box-shadow: none;
+  }
+  
+  .action-button {
+      display: none;
+  }
+  
+  .output-section {
+      page-break-before: always;
+  }
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #e3f2fd, #f1f8e9); /* soft gradient */
+  min-height: 100vh;
+}
+
+/* Developer Information */
+.developer-info {
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: #e3f2fd;
+  border: 1px solid #90caf9;
+  border-radius: 5px;
+  text-align: center;
+  color: #1565c0;
+}
+
+.developer-name {
+  font-weight: bold;
+  margin: 0 0 5px 0;
+  font-size: 16px;
+}
+
+.developer-details {
+  margin: 0 0 5px 0;
+  font-size: 14px;
+}
+
+.developer-guide {
+  margin: 0;
+  font-size: 14px;
+}
